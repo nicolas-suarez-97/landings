@@ -11,6 +11,11 @@ const Layout = props => {
         {path: "/recetas", label: "Recetas"},
         {path: "/cursos", label: "Cursos"},
     ];
+
+    const landingOptions = [
+        {path: props.courseUrl, label: "Ingreso al Curso"},
+        {path: "/cursos", label: "Más Cursos"},
+    ];
     const footerOptions = [
         'nosotros',
         'contacto',
@@ -29,7 +34,7 @@ const Layout = props => {
             </Head>
             <Header
                 title="Preparalo en Casa"
-                options={props.pageType === PageType.LANDING ? [{path: "/cursos", label: "Más Cursos"}] : headerOptions}
+                options={props.pageType === PageType.LANDING ? landingOptions : headerOptions}
                 placeholder="Buscar ..."
                 pageType={props.pageType}
             />

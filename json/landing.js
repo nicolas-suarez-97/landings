@@ -2,14 +2,15 @@ export const LandingData = {
     id: '',
     creationDate: '',
     modificationDate: '',
+    courseUrl: '/',
     pageType: 'landing',
     description: 'Aprende a elaborar los platillos mexicanos que amas, de manera saludable y sin sacrificar su delicioso sabor.',
     videoUrl: 'https://youtube.com/embed/puOrWvvzJjg',
-    certificateUrl: 'https://static-media.hotmart.com/NDoojV9NachXySydNSrFAhcwNKw=/1024x709/filters:quality(100)/hotmart/checkout_custom/e1fd7c77-f4c7-405f-814c-03d289e95707/ki45bn26l.jpg',
     banner: {
         title: 'Comida mexicana para diabéticos',
         subtitle: 'Master Class',
         backgroundImage: 'https://static.vecteezy.com/system/resources/previews/000/199/381/non_2x/mexican-food-menu-vector.png',
+        isCircle: true,
         primaryButtonLabel: 'Lo quiero !!',
         primaryButtonAction: '/',
         secondaryButtonLabel: 'Conocer más',
@@ -44,6 +45,37 @@ export const LandingData = {
                 icon: 'account_circle',
             },
         ]
+    },
+    benefits: {
+        title: 'Beneficios adicionales',
+        certificateUrl: 'https://static-media.hotmart.com/NDoojV9NachXySydNSrFAhcwNKw=/1024x709/filters:quality(100)/hotmart/checkout_custom/e1fd7c77-f4c7-405f-814c-03d289e95707/ki45bn26l.jpg',
+        warrantyUrl: 'https://el-socio.com/wp-content/uploads/2020/10/Garantia.png',
+        benefitsList: [
+            {
+                icon: 'workspace_premium',
+                label: 'Certificación de finalización',
+            },
+            {
+                icon: 'more_time',
+                label: 'Más de 3 horas de estudio',
+            },
+            {
+                icon: 'language',
+                label: 'Idioma: Español',
+            },
+            {
+                icon: 'wifi',
+                label: 'Online y a tu ritmo',
+            },
+            {
+                icon: 'all_inclusive',
+                label: 'Acceso de por vida',
+            },
+            {
+                icon: 'attach_money',
+                label: 'Te devolvemos tu compra al 100% si no estás contento con tu curso',
+            },
+        ],
     },
     modules: {
         title: 'Contenido del curso',
@@ -117,7 +149,7 @@ export const LandingData = {
     },
     getStarted: {
         title: '¿Qué esperas para empezar a aprender?',
-        subtitle: 'Registrate ahora y conoce todo el contenido que tenemos preparado para ti.',
+        subtitle: 'Ingresa ahora y conoce todo el contenido que tenemos preparado para ti.',
         imageUrl: 'https://cdn.pixabay.com/photo/2018/08/30/23/51/taco-3643599_960_720.png',
         buttonLabel: 'Registrarme',
         buttonAction: '/',

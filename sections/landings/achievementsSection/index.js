@@ -1,5 +1,9 @@
 import React from "react";
-import styles from "./achievement.module.scss";
+import styles, {
+    title,
+    achievement__content,
+    achievement__items,
+} from "./achievement.module.scss";
 
 const AchievementsSection = ({achievement}) => {
     const {yellow, blue, green, purple, lightBlue, red} = styles;
@@ -13,11 +17,11 @@ const AchievementsSection = ({achievement}) => {
     ]
 
     return (
-        <>
-            <h2 className={styles.title}>{achievement.title}</h2>
-            <ul className={styles.achievement__content}>
+        <section>
+            <h2 className={title}>{achievement.title}</h2>
+            <ul className={achievement__content}>
                 {achievement.items.map((i, index) => (
-                    <li key={index} className={styles.achievement__items}>
+                    <li key={index} className={achievement__items}>
                         {i.icon
                             ? <span className={`material-icons ${colors[index]}`}>{i.icon}</span>
                             : null
@@ -26,7 +30,7 @@ const AchievementsSection = ({achievement}) => {
                     </li>
                 ))}
             </ul>
-        </>
+        </section>
     );
 }
 

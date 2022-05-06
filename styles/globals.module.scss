@@ -14,7 +14,9 @@ $border-radius-4: 32px;
 $border-radius-5: 50px;
 
 //Colors
-$secondary-color: rgb(202, 0, 0);
+$primary-color: #CA0000FF;
+$secondary-color: #FEF5F5;
+$secondary-shadow-1: linear-gradient(180deg, rgba(255, 245, 245, 1) 0%,  rgba(255, 255, 255, 1) 10%);
 
 //Sizes
 $min-layout-height: 500px;
@@ -80,9 +82,9 @@ $fullsize-screen: 1100px;
 }
 
 .content {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
-  text-align: justify;
+  text-align: center;
 
   @media (max-width: $mobile-screen) {
     width: 100%;

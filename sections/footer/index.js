@@ -1,18 +1,23 @@
 import React from "react";
 import Link from "next/link";
-import styles from "./footer.module.scss";
+import {
+    footer,
+    footer__options,
+    divider,
+    legal
+} from "./footer.module.scss";
 
 const Footer = ({footerOptions}) => {
 
     return (
-        <div className={styles.footer}>
-            <ul className={styles.footer__options}>
+        <div className={footer}>
+            <ul className={footer__options}>
                 {footerOptions.map(i => (
                     <li key={i}><Link href={`/${i}`}>{i}</Link></li>
                 ))}
             </ul>
-            <div className={styles.divider}/>
-            <p className={styles.legal}>
+            <div className={divider}/>
+            <p className={legal}>
                 Aviso legal: “Este producto se comercializa con el apoyo de Hotmart. La plataforma no realiza un
                 control editorial previo de los productos ofertados, ni evalúa el tecnicismo o la experiencia de
                 quienes los elaboran. La existencia de un producto y su adquisición, a través de la plataforma, no

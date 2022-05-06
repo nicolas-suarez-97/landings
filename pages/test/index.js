@@ -10,14 +10,16 @@ import styles from "./test.module.scss";
 import VideoComponent from "../../components/videoComponent";
 import HookSection from "../../sections/landings/hookSection";
 import GetStartedSection from "../../sections/landings/getStartedSection";
+import BenefitsSection from "../../sections/landings/benefitsSection";
 
 const Test = () => {
     const {
         pageType,
+        courseUrl,
         banner,
         hook,
         videoUrl,
-        certificateUrl,
+        benefits,
         achievement,
         modules,
         getStarted,
@@ -29,6 +31,7 @@ const Test = () => {
         <>
             <Layout
                 pageType={pageType}
+                courseUrl={courseUrl}
             >
                 <TopBannerSection
                     banner={banner}
@@ -46,22 +49,21 @@ const Test = () => {
                     achievement={achievement}
                 />
 
+                <ProducerSection
+                    producer={producer}
+                />
+
                 <ModulesSection
                     modules={modules}
+                />
+
+                <BenefitsSection
+                    benefits={benefits}
                 />
 
                 <GetStartedSection
                     getStarted={getStarted}
                 />
-
-                <ProducerSection
-                    producer={producer}
-                />
-
-                {/*<img
-                    src={certificateUrl}
-                    width="100%"
-                />*/}
 
                 <FaqSection
                     faq={faq}

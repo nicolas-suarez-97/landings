@@ -21,7 +21,7 @@
     text-align: start;
     text-transform: uppercase;
     font-size: 30px;
-    color: $secondary-color;
+    color: $primary-color;
     margin: $separation-24 0;
   }
 
@@ -69,7 +69,7 @@
       height: 2px;
       bottom: 0;
       left: 6px;
-      background-color: $secondary-color;
+      background-color: $primary-color;
       transform-origin: bottom right;
       transition: transform 0.5s ease-out;
     }
@@ -81,6 +81,7 @@
   }
 
   &__background {
+    border-radius: $border-radius-2;
     height: 450px;
     width: 450px;
     position: absolute;
@@ -101,6 +102,10 @@
     border: none;
     transition: all ease-out 0.3s;
   }
+}
+
+.circle {
+  border-radius: 500px;
 }
 
 @media (max-width: 800px) {

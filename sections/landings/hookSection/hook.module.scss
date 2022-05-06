@@ -3,6 +3,11 @@
 .hook {
   display: flex;
   flex-direction: column;
+  background-color: $secondary-color;
+  border-radius: $border-radius-2;
+  padding: $separation-16;
+  margin: 0 $separation-24;
+
   &__content {
     width: 80%;
     margin: 0 auto;
@@ -25,6 +30,7 @@
 
 @media (max-width: $mobile-screen) {
   .hook {
+    margin: 0;
     &__actionButton {
       width: 100%;
     }
