@@ -1,10 +1,5 @@
 @import "../../../styles/globals.module";
 
-@keyframes scroll {
-  0% { transform: translateX(0);}
-  100% { transform: translateX(calc(-400px * 3));}
-}
-
 .reviews {
   overflow: hidden;
   margin: $separation-24;
@@ -12,20 +7,6 @@
 
   &::-webkit-scrollbar {
     width: 0;
-  }
-
-  &__list {
-    display: inline-flex;
-    animation: scroll 30s linear infinite;
-    width: calc(400px * 6);
-
-    &:hover {
-      animation-play-state: paused;
-    }
-
-    &.pause {
-      animation-play-state: paused;
-    }
   }
 
   &__card {
@@ -101,17 +82,8 @@
 }
 
 @media (max-width: $mobile-screen) {
-  @keyframes scroll {
-    0% { transform: translateX(0);}
-    100% { transform: translateX(calc(-320px * 3));}
-  }
-
   .reviews {
     margin: 0;
-
-    &__list {
-      width: calc(320px * 6);
-    }
 
     &__card {
       width: 320px;

@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import styles, {
-    reviews__list,
     reviews__card,
     reviews__description,
     reviews__bottomSection,
@@ -24,7 +23,7 @@ const ReviewsSection = ({reviews}) => {
         <section>
             <h2 className={styles.title}>{title}</h2>
             <div className={styles.reviews}>
-                <div className={`${reviews__list} ${pause ? styles.pause : null}`}>
+                <div className={`list ${pause ? 'pause' : ''}`}>
                     {items.map((item, index) => (
                         <div key={index} className={reviews__card}>
                             <div>
@@ -56,6 +55,44 @@ const ReviewsSection = ({reviews}) => {
             <div className={reviews__pause} onClick={togglePause}>
                 <a className="material-icons">{pause ? 'play_arrow' : 'pause'}</a>
             </div>
+            <style jsx>{`
+              @keyframes scroll {
+                0% {
+                  transform: translateX(0);
+                }
+                100% {
+                  transform: translateX(calc(-400px * ${items.length}));
+                }
+              }
+
+              .list {
+                display: inline-flex;
+                animation: scroll 30s linear infinite;
+                width: calc(400px * ${items.length * 2});
+              }
+
+              .list:hover {
+                animation-play-state: paused;
+              }
+
+              .pause {
+                animation-play-state: paused;
+              }
+
+              @media (max-width: 460px) {
+                @keyframes scroll {
+                  0% {
+                    transform: translateX(0);
+                  }
+                  100% {
+                    transform: translateX(calc(-320px * ${items.length}));
+                  }
+                }
+                .list {
+                  width: calc(320px * ${items.length * 2});
+                }
+              }
+            `}</style>
         </section>
     );
 }
