@@ -5,15 +5,25 @@ import styles, {
     modules__list,
     modules__title,
     modules__item,
+    modules__shadow,
+    reduce,
 } from "./modules.module.scss";
 
 const ModulesSection = ({modules}) => {
     const {title, steps, itemsIcon} = modules;
+    const [expand, setExpand] = useState(false);
+
+    const toggleExpand = () => {
+        expand
+            ? setExpand(false)
+            : setExpand(true)
+
+    }
 
     return (
-        <section>
-            <h2 className={styles.title}>{title}</h2>
-            <div className={modules__container}>
+        <section className={styles.modules}>
+            <h2 className={styles.title} id="modules">{title}</h2>
+            <div className={`${modules__container} ${expand ? '' : reduce}`}>
                 <div>
                     {steps.map((step, index) => (
                         <div key={index} className={modules__content}>
@@ -35,7 +45,9 @@ const ModulesSection = ({modules}) => {
                         : null
                     }
                 </div>
+                <div className={`${modules__shadow} ${expand ? styles.expand : ''}`}/>
             </div>
+            <div className={styles.modules__icon}><span className={`material-icons ${expand ? styles.rotateOn : styles.rotateOff}`} onClick={toggleExpand}>expand_more</span></div>
         </section>
     );
 }

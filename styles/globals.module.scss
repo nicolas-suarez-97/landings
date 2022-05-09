@@ -17,6 +17,8 @@ $border-radius-5: 50px;
 $primary-color: #CA0000FF;
 $secondary-color: #FEF5F5;
 $secondary-shadow-1: linear-gradient(180deg, rgba(255, 245, 245, 1) 0%,  rgba(255, 255, 255, 1) 10%);
+$white-gradient-ver: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255, 0.50) 25%, rgba(255,255,255, 0.20) 77%, rgba(255,255,255,0) 100%);
+$white-gradient-hor: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255, 0.50) 25%, rgba(255,255,255, 0.20) 77%, rgba(255,255,255,0) 100%);
 
 //Sizes
 $min-layout-height: 500px;
@@ -89,4 +91,13 @@ $fullsize-screen: 1100px;
   @media (max-width: $mobile-screen) {
     width: 100%;
   }
+}
+
+.rotateOn {
+  transform: rotate(180deg);
+  transition: 0.5s all ease;
+}
+
+.rotateOff {
+  transition: 0.5s all ease;
 }

@@ -1,11 +1,21 @@
 @import "../../../styles/globals.module";
 
 .modules {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   &__container {
     display: flex;
     justify-content: center;
     padding: $separation-16;
+    transition: all 0.5s ease-in-out;
+    position: relative;
 
+    &.reduce {
+      height: 300px;
+      overflow: hidden;
+    }
   }
 
   &__module {
@@ -90,4 +100,22 @@
     }
 
   }
+
+  &__shadow {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: $white-gradient-ver;
+    height: 250px;
+    width: 100%;
+
+    &.expand {
+      display: none
+    }
+  }
+
+  &__icon {
+    cursor: pointer;
+  }
 }
+

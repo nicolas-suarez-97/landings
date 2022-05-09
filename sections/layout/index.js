@@ -14,7 +14,7 @@ const Layout = props => {
 
     const landingOptions = [
         {path: props.courseUrl, label: "Ingreso al Curso"},
-        {path: "/cursos", label: "Más Cursos"},
+        //{path: "/cursos", label: "Más Cursos"},
     ];
     const footerOptions = [
         'nosotros',

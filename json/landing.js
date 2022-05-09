@@ -147,6 +147,38 @@ export const LandingData = {
             },
         ]
     },
+    reviews: {
+        title: '¿Qué opinan nuestros alumnos?',
+        items: [
+            {
+                author: 'Diego Contreras',
+                authorPicture: 'https://cdn-icons-png.flaticon.com/512/147/147140.png',
+                review: 'Desde hace mucho, buscaba cursos online que de verdad tuvieran calidad y me ayudaran ' +
+                    'a mejorar a mi gusto a ofrecer a mis amigos ricos tragos a la hora de compartir. ' +
+                    'Que suerte encontrarlos. Los súper recomiendo.',
+            },
+            {
+                author: 'Luis Alberto Silva',
+                authorPicture: 'https://cdn-icons-png.flaticon.com/512/147/147144.png',
+                review: 'Quedé gratamente sorprendido por la variedad de' +
+                    'cócteles que se enseñan en el curso, además de las' +
+                    'técnicas modernas de uso de sifónoel disecado de frutas' +
+                    'para decoración, todas esas cosas dan un carácter' +
+                    'profesionalalo que uno hace, lo que más me gusta' +
+                    'también es que uno puede hacer el curso en casa sin' +
+                    'tener que iraun lugaryrestarle tiempoaotras tareas,' +
+                    'muy agradecido por el curso!!!',
+            },
+            {
+                author: 'Alicia Sáez',
+                authorPicture: 'https://www.pngarts.com/files/3/Avatar-PNG-High-Quality-Image.png',
+                review: 'Super entretenido el curso de cocteleria online, lo' +
+                    'puedes seguir en tu casaypracticando de inmediato,' +
+                    'las explicaciones son muy buenasyse nota que el profe' +
+                    'sabe, excelente iniciativa de cursos de cocinal!',
+            },
+        ],
+    },
     getStarted: {
         title: '¿Qué esperas para empezar a aprender?',
         subtitle: 'Ingresa ahora y conoce todo el contenido que tenemos preparado para ti.',

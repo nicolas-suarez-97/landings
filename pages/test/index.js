@@ -6,11 +6,11 @@ import AchievementsSection from "../../sections/landings/achievementsSection";
 import ModulesSection from "../../sections/landings/modulesSection";
 import ProducerSection from "../../sections/landings/producerSection";
 import FaqSection from "../../sections/landings/faqSection";
-import styles from "./test.module.scss";
 import VideoComponent from "../../components/videoComponent";
 import HookSection from "../../sections/landings/hookSection";
 import GetStartedSection from "../../sections/landings/getStartedSection";
 import BenefitsSection from "../../sections/landings/benefitsSection";
+import ReviewsSection from "../../sections/landings/reviewsSection";
 
 const Test = () => {
     const {
@@ -22,6 +22,7 @@ const Test = () => {
         benefits,
         achievement,
         modules,
+        reviews,
         getStarted,
         producer,
         faq
@@ -59,6 +60,10 @@ const Test = () => {
 
                 <BenefitsSection
                     benefits={benefits}
+                />
+
+                <ReviewsSection
+                    reviews={reviews}
                 />
 
                 <GetStartedSection
