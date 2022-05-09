@@ -52,8 +52,8 @@ const ReviewsSection = ({reviews}) => {
                 <div className={`${gradient} ${styles.right}`}/>
                 <div className={`${gradient} ${styles.left}`}/>
             </div>
-            <div className={reviews__pause} onClick={togglePause}>
-                <a className="material-icons">{pause ? 'play_arrow' : 'pause'}</a>
+            <div className={reviews__pause} >
+                <a onClick={togglePause} className="material-icons">{pause ? 'play_arrow' : 'pause'}</a>
             </div>
             <style jsx>{`
               @keyframes scroll {
