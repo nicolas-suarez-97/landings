@@ -207,4 +207,9 @@ export const LandingData = {
             },
         ],
     },
+    pricing: {
+        label: 'Empieza hoy desde',
+        value: '$25 USD',
+        url: '/',
+    },
 };

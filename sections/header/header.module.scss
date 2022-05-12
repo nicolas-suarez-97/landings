@@ -43,8 +43,7 @@
     align-content: center;
     border-radius: $border-radius-2;
     padding: 4px $separation-8;
-    background-color: white;
-    //box-shadow: $card-elevation-2;
+    background-color: $base-color;
   }
 
   &__search > span {

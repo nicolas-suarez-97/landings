@@ -11,6 +11,7 @@ import HookSection from "../../sections/landings/hookSection";
 import GetStartedSection from "../../sections/landings/getStartedSection";
 import BenefitsSection from "../../sections/landings/benefitsSection";
 import ReviewsSection from "../../sections/landings/reviewsSection";
+import PricingSection from "../../sections/landings/pricingSection";
 
 const Test = () => {
     const {
@@ -25,7 +26,8 @@ const Test = () => {
         reviews,
         getStarted,
         producer,
-        faq
+        faq,
+        pricing,
     } = LandingData;
 
     return (
@@ -72,6 +74,10 @@ const Test = () => {
 
                 <FaqSection
                     faq={faq}
+                />
+
+                <PricingSection
+                    pricing={pricing}
                 />
 
             </Layout>

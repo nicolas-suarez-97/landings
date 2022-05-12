@@ -108,7 +108,7 @@
   border-radius: 500px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: $laptop-screen) {
   .banner {
     &__background {
       width: 400px;
