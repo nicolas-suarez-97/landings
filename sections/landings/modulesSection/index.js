@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useRef, useState} from "react";
 import styles, {
     modules__container,
     modules__content,
@@ -12,16 +12,21 @@ import styles, {
 const ModulesSection = ({modules}) => {
     const {title, steps, itemsIcon} = modules;
     const [expand, setExpand] = useState(false);
+    const ref = useRef(null);
+    const scroll = () => ref.current.scrollIntoView();
 
     const toggleExpand = () => {
-        expand
-            ? setExpand(false)
-            : setExpand(true)
+        if (expand) {
+            setExpand(false)
+            scroll()
+        } else {
+            setExpand(true)
+        }
 
     }
 
     return (
-        <section className={styles.modules}>
+        <section className={styles.modules} ref={ref}>
             <h2 className={styles.title} id="modules">{title}</h2>
             <div className={`${modules__container} ${expand ? '' : reduce}`}>
                 <div>
@@ -40,14 +45,16 @@ const ModulesSection = ({modules}) => {
                     ))}
                     {steps.length > 0 ?
                         <div className={modules__content}>
-                            <span className={modules__title} />
+                            <span className={modules__title}/>
                         </div>
                         : null
                     }
                 </div>
                 <div className={`${modules__shadow} ${expand ? styles.expand : ''}`}/>
             </div>
-            <div className={styles.modules__icon}><span className={`material-icons ${expand ? styles.rotateOn : styles.rotateOff}`} onClick={toggleExpand}>expand_more</span></div>
+            <div className={styles.modules__icon}><span
+                className={`material-icons ${expand ? styles.rotateOn : styles.rotateOff}`}
+                onClick={toggleExpand}>expand_more</span></div>
         </section>
     );
 }
