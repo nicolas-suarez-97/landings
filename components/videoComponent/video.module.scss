@@ -7,6 +7,8 @@
   border: none;
   margin: $separation-48 auto;
   display: flex;
+  justify-content: center;
+  overflow: hidden;
 
 
   @media (max-width: $laptop-screen) {

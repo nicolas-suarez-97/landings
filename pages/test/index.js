@@ -38,9 +38,6 @@ const Test = () => {
             >
                 <TopBannerSection
                     banner={banner}
-                />
-
-                <VideoComponent
                     videoUrl={videoUrl}
                 />
 
