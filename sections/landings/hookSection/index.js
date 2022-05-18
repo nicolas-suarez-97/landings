@@ -10,7 +10,7 @@ const HookSection = ({hook}) => {
     return (
         <section className={styles.hook}>
             <h2 className={styles.title}>{title}</h2>
-            <p className={hook__content}>{content}</p>
+            <p className={hook__content} dangerouslySetInnerHTML={{__html: content}} />
             <ActionButton
                 url={buttonAction}
                 label={buttonLabel}

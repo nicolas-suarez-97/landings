@@ -15,16 +15,9 @@ import VideoComponent from "../../../components/videoComponent";
 import ReactPlayer from "react-player";
 
 const TopBannerSection = ({videoUrl, banner}) => {
-    const {title, subtitle, backgroundImage, isCircle, primaryButtonLabel, primaryButtonAction, secondaryButtonLabel, secondaryButtonAction} = banner;
+    const {title, subtitle, backgroundImage, isCircle, primaryButtonLabel, primaryButtonAction, secondaryButtonLabel} = banner;
     const [play, setPlay] = useState(false);
     const videoSectionRef = useRef(null);
-    const [hasWindow, setHasWindow] = useState(false);
-
-    useEffect(() => {
-        if (typeof window !== "undefined") {
-            setHasWindow(true);
-        }
-    }, []);
 
     const scrollToVideo = () => {
         console.log(videoSectionRef.current.getBoundingClientRect())

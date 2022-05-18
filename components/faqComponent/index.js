@@ -17,7 +17,7 @@ const FaqComponent = ({item}) => {
                     <h4>{item.question}</h4>
                     <span className={`material-icons ${expand ? styles.rotateOn : styles.rotateOff}`}>expand_more</span>
                 </div>
-                <p className={`${styles.faq__answer} ${expand ? styles.expand : styles.less}`}>{item.answer}</p>
+                <p className={`${styles.faq__answer} ${expand ? styles.expand : styles.less}`} dangerouslySetInnerHTML={{__html: item.answer}} />
             </div>
         </div>
     );

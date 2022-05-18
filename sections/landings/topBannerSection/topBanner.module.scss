@@ -91,6 +91,7 @@
     right: 0;
     z-index: 1;
     transition: all ease-out 0.3s;
+    margin-right: $separation-32;
   }
 
   &__video {
@@ -113,8 +114,8 @@
 @media (max-width: $laptop-screen) {
   .banner {
     &__background {
-      width: 400px;
-      height: 400px;
+      width: 300px;
+      height: 300px;
     }
 
     &__video {
@@ -140,6 +141,7 @@
     &__background {
       width: 200px;
       height: 200px;
+      margin-right: $separation-16;
     }
 
     &__video {
@@ -165,6 +167,7 @@
     &__background {
       width: 150px;
       height: 150px;
+      margin-right: 0;
     }
 
     &__video {

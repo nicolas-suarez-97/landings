@@ -1,19 +1,20 @@
 import React from "react";
-import {LandingData} from "../../json/landing";
-import Layout from "../../sections/layout";
-import TopBannerSection from "../../sections/landings/topBannerSection";
-import AchievementsSection from "../../sections/landings/achievementsSection";
-import ModulesSection from "../../sections/landings/modulesSection";
-import ProducerSection from "../../sections/landings/producerSection";
-import FaqSection from "../../sections/landings/faqSection";
-import VideoComponent from "../../components/videoComponent";
-import HookSection from "../../sections/landings/hookSection";
-import GetStartedSection from "../../sections/landings/getStartedSection";
-import BenefitsSection from "../../sections/landings/benefitsSection";
-import ReviewsSection from "../../sections/landings/reviewsSection";
-import PricingSection from "../../sections/landings/pricingSection";
+import Layout from "../../../sections/layout";
+import TopBannerSection from "../../../sections/landings/topBannerSection";
+import HookSection from "../../../sections/landings/hookSection";
+import AchievementsSection from "../../../sections/landings/achievementsSection";
+import ProducerSection from "../../../sections/landings/producerSection";
+import ModulesSection from "../../../sections/landings/modulesSection";
+import BenefitsSection from "../../../sections/landings/benefitsSection";
+import ReviewsSection from "../../../sections/landings/reviewsSection";
+import GetStartedSection from "../../../sections/landings/getStartedSection";
+import FaqSection from "../../../sections/landings/faqSection";
+import PricingSection from "../../../sections/landings/pricingSection";
+import fs from "fs";
 
-const Test = () => {
+const Course = ({course}) => {
+    console.log(course)
+    const {LandingData} = require(`../../../json/${course}.js`);
     const {
         pageType,
         courseUrl,
@@ -79,7 +80,21 @@ const Test = () => {
 
             </Layout>
         </>
-    )
+    );
 }
 
-export default Test;
+export async function getStaticProps({params}) {
+
+    return { props: { course: params.course} }
+}
+
+export async function getStaticPaths() {
+    const filenames = fs.readdirSync('./json')
+    const paths = filenames.map(name => ({
+        params: {course: name.replace('.js', '')}
+    }))
+
+    return { paths, fallback: false }
+}
+
+export default Course;
