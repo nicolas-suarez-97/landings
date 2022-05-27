@@ -5,16 +5,18 @@ import styles, {
 } from "./hook.module.scss";
 import ActionButton from "../../../components/actionButton";
 
-const HookSection = ({hook}) => {
-    const {title, content, buttonLabel, buttonAction} = hook;
+const HookSection = ({hook, linkData}) => {
+    const {title, content, buttonLabel} = hook;
+    const {url, discount, setIsModalOpen} = linkData
     return (
         <section className={styles.hook}>
             <h2 className={styles.title}>{title}</h2>
             <p className={hook__content} dangerouslySetInnerHTML={{__html: content}} />
             <ActionButton
-                url={buttonAction}
+                url={url}
                 label={buttonLabel}
                 buttonStyle={hook__actionButton}
+                onClickAction={setIsModalOpen}
             />
         </section>
     );

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Layout from "../../../sections/layout";
 import TopBannerSection from "../../../sections/landings/topBannerSection";
 import HookSection from "../../../sections/landings/hookSection";
@@ -11,6 +11,7 @@ import GetStartedSection from "../../../sections/landings/getStartedSection";
 import FaqSection from "../../../sections/landings/faqSection";
 import PricingSection from "../../../sections/landings/pricingSection";
 import fs from "fs";
+import PaymentModal from "../../../sections/landings/paymentModal";
 
 const Course = ({course}) => {
     console.log(course)
@@ -29,7 +30,20 @@ const Course = ({course}) => {
         producer,
         faq,
         pricing,
+        value,
+        redirect,
+        links,
     } = LandingData;
+    const [isModalOpen, setIsModalOpen] = useState(false)
+    let linkData = links[value]
+
+    if (!redirect) {
+        linkData = {
+            ...linkData,
+            isModalOpen,
+            setIsModalOpen
+        }
+    }
 
     return (
         <>
@@ -40,10 +54,12 @@ const Course = ({course}) => {
                 <TopBannerSection
                     banner={banner}
                     videoUrl={videoUrl}
+                    linkData={linkData}
                 />
 
                 <HookSection
                     hook={hook}
+                    linkData={linkData}
                 />
 
                 <AchievementsSection
@@ -68,6 +84,7 @@ const Course = ({course}) => {
 
                 <GetStartedSection
                     getStarted={getStarted}
+                    linkData={linkData}
                 />
 
                 <FaqSection
@@ -76,6 +93,14 @@ const Course = ({course}) => {
 
                 <PricingSection
                     pricing={pricing}
+                    linkData={linkData}
+                    value={value}
+                />
+
+                <PaymentModal
+                    isModalOpen={isModalOpen}
+                    setIsModalOpen={setIsModalOpen}
+                    linkData={linkData}
                 />
 
             </Layout>

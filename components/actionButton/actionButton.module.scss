@@ -15,6 +15,7 @@
   justify-content: center;
   align-items: center;
   text-transform: capitalize;
+  cursor: pointer;
 
   &:hover {
     border: $primary-color 1px solid;

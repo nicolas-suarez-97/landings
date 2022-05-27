@@ -14,8 +14,9 @@ import ActionButton from "../../../components/actionButton";
 import VideoComponent from "../../../components/videoComponent";
 import ReactPlayer from "react-player";
 
-const TopBannerSection = ({videoUrl, banner}) => {
-    const {title, subtitle, backgroundImage, isCircle, primaryButtonLabel, primaryButtonAction, secondaryButtonLabel} = banner;
+const TopBannerSection = ({videoUrl, banner, linkData}) => {
+    const {title, subtitle, backgroundImage, isCircle, primaryButtonLabel, secondaryButtonLabel} = banner;
+    const {url, discount, setIsModalOpen} = linkData
     const [play, setPlay] = useState(false);
     const videoSectionRef = useRef(null);
 
@@ -36,9 +37,10 @@ const TopBannerSection = ({videoUrl, banner}) => {
                     <h2 className={banner__subtitle}>{subtitle}</h2>
                     <div className={banner__buttonRow}>
                         <ActionButton
-                            url={primaryButtonAction}
+                            url={url}
                             label={primaryButtonLabel}
                             buttonStyle={banner__button}
+                            onClickAction={setIsModalOpen}
                         />
                         <div className={banner__moreButton}>
                             <span className="material-icons">play_arrow</span>

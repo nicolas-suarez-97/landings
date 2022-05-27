@@ -9,8 +9,10 @@ import styles, {
 } from "./getStarted.module.scss";
 import ActionButton from "../../../components/actionButton";
 
-const GetStartedSection = ({getStarted}) => {
-    const {title, subtitle, imageUrl, buttonLabel, buttonAction} = getStarted;
+const GetStartedSection = ({getStarted, linkData}) => {
+    const {title, subtitle, imageUrl, buttonLabel} = getStarted;
+    const {url, discount, setIsModalOpen} = linkData
+
     return (
         <section className={styles.getStarted}>
             <div className={getStarted__container}>
@@ -19,8 +21,9 @@ const GetStartedSection = ({getStarted}) => {
                     <h4 className={getStarted__subtitle}>{subtitle}</h4>
                     <ActionButton
                         label={buttonLabel}
-                        url={buttonAction}
+                        url={url}
                         buttonStyle={getStarted__button}
+                        onClickAction={setIsModalOpen}
                     />
                 </div>
                 <div>

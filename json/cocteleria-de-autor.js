@@ -6,13 +6,32 @@ export const LandingData = {
     pageType: 'landing',
     description: 'Aprende a elaborar los platillos mexicanos que amas, de manera saludable y sin sacrificar su delicioso sabor.',
     videoUrl: 'https://youtube.com/embed/puOrWvvzJjg',
+    value: 25,
+    redirect: false,
+    links : {
+        15: {
+            discount: 85,
+            url: 'https://go.hotmart.com/E70861619Y?ap=3100',
+        },
+        25: {
+            discount: 80,
+            url: 'https://go.hotmart.com/E70861619Y?ap=4d1a',
+        },
+        35: {
+            discount: 70,
+            url: 'https://go.hotmart.com/E70861619Y?ap=61be',
+        },
+        45: {
+            discount: 0,
+            url: 'https://go.hotmart.com/E70861619Y?ap=b5fc',
+        }
+    },
     banner: {
         title: 'Coctelería de autor online',
         subtitle: 'Master Class',
         backgroundImage: 'https://images.pexels.com/photos/5041570/pexels-photo-5041570.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
         isCircle: true,
         primaryButtonLabel: 'Lo quiero !!',
-        primaryButtonAction: '/',
         secondaryButtonLabel: 'Conocer más',
     },
     categories: [
@@ -34,7 +53,6 @@ export const LandingData = {
             '<br/>' +
             'Además tendrás la oportunidad de conocer distintos cocteles de autor, técnicas de bar, herramientas de bar, entre muchas otras cosas.',
         buttonLabel: 'Registrarme',
-        buttonAction: '/',
     },
     achievement: {
         title: '¿Qué vas a lograr?',
@@ -59,7 +77,7 @@ export const LandingData = {
     },
     benefits: {
         title: 'Beneficios adicionales',
-        certificateUrl: 'https://static-media.hotmart.com/NDoojV9NachXySydNSrFAhcwNKw=/1024x709/filters:quality(100)/hotmart/checkout_custom/e1fd7c77-f4c7-405f-814c-03d289e95707/ki45bn26l.jpg',
+        certificateUrl: 'https://cdn.shopify.com/s/files/1/0078/9620/3362/files/CERTIFICADO_PARA_WEB-cocteleriadeautor_1400x.png?v=1630174592',
         warrantyUrl: 'https://el-socio.com/wp-content/uploads/2020/10/Garantia.png',
         benefitsList: [
             {
@@ -171,22 +189,22 @@ export const LandingData = {
             {
                 author: 'Luis Alberto Silva',
                 authorPicture: 'https://cdn-icons-png.flaticon.com/512/147/147144.png',
-                review: 'Quedé gratamente sorprendido por la variedad de' +
-                    'cócteles que se enseñan en el curso, además de las' +
-                    'técnicas modernas de uso de sifónoel disecado de frutas' +
-                    'para decoración, todas esas cosas dan un carácter' +
-                    'profesionalalo que uno hace, lo que más me gusta' +
-                    'también es que uno puede hacer el curso en casa sin' +
-                    'tener que iraun lugaryrestarle tiempoaotras tareas,' +
+                review: 'Quedé gratamente sorprendido por la variedad de ' +
+                    'cócteles que se enseñan en el curso, además de las ' +
+                    'técnicas modernas de uso de sifónoel disecado de frutas ' +
+                    'para decoración, todas esas cosas dan un carácter ' +
+                    'profesionalalo que uno hace, lo que más me gusta ' +
+                    'también es que uno puede hacer el curso en casa sin ' +
+                    'tener que iraun lugaryrestarle tiempoaotras tareas, ' +
                     'muy agradecido por el curso!!!',
             },
             {
                 author: 'Alicia Sáez',
                 authorPicture: 'https://www.pngarts.com/files/3/Avatar-PNG-High-Quality-Image.png',
-                review: 'Super entretenido el curso de cocteleria online, lo' +
-                    'puedes seguir en tu casaypracticando de inmediato,' +
-                    'las explicaciones son muy buenasyse nota que el profe' +
-                    'sabe, excelente iniciativa de cursos de cocinal!',
+                review: 'Super entretenido el curso de cocteleria online, lo ' +
+                    'puedes seguir en tu casaypracticando de inmediato, ' +
+                    'las explicaciones son muy buenasyse nota que el profe ' +
+                    'sabe, excelente iniciativa de cursos de cocinal! ',
             },
         ],
     },
@@ -195,7 +213,6 @@ export const LandingData = {
         subtitle: 'Ingresa ahora y conoce todo el contenido que tenemos preparado para ti.',
         imageUrl: 'https://cdn.pixabay.com/photo/2018/08/30/23/51/taco-3643599_960_720.png',
         buttonLabel: 'Registrarme',
-        buttonAction: '/',
     },
     producer: {
         title: 'Acerca de la productora',
@@ -220,7 +237,5 @@ export const LandingData = {
     },
     pricing: {
         label: 'Empieza hoy desde',
-        value: '$25 USD',
-        url: '/',
     },
 };

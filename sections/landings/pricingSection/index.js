@@ -2,10 +2,11 @@ import React, {useEffect, useState} from "react";
 import styles from "./pricing.module.scss";
 import ActionButton from "../../../components/actionButton";
 
-const PricingSection = ({pricing}) => {
-    const {label, value, url} = pricing;
+const PricingSection = ({pricing, linkData, value}) => {
+    const {label} = pricing;
     const [scrollPosition, setScrollPosition] = useState(0);
     const [hideSection, setHideSection] = useState(false);
+    const {url, discount, setIsModalOpen} = linkData
     const handleScroll = () => {
         const position = window.pageYOffset;
         setScrollPosition(position);
@@ -30,11 +31,12 @@ const PricingSection = ({pricing}) => {
 
     return (
         <section className={`${styles.pricing} ${showSection() ? styles.hide : ''}`}>
-            <h2 className={styles.pricing__text}>{label} <span>{value}</span></h2>
+            <h2 className={styles.pricing__text}>{label} <span>${value} USD</span></h2>
             <ActionButton
                 url={url}
                 label="Comprar"
                 buttonStyle={styles.pricing__button}
+                onClickAction={setIsModalOpen}
             />
             <div className={styles.pricing__close} onClick={() => setHideSection(true)}><i className="material-icons">close</i></div>
         </section>
