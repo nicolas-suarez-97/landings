@@ -6,6 +6,14 @@ export const LandingData = {
     pageType: 'landing',
     description: 'Aprende a elaborar los platillos mexicanos que amas, de manera saludable y sin sacrificar su delicioso sabor.',
     videoUrl: 'https://youtube.com/embed/puOrWvvzJjg',
+    value: 15,
+    redirect: true,
+    links : {
+        15: {
+            discount: 85,
+            url: '/',
+        }
+    },
     banner: {
         title: 'Comida mexicana para diabéticos',
         subtitle: 'Master Class',

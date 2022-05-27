@@ -6,7 +6,7 @@ export const LandingData = {
     pageType: 'landing',
     description: 'Aprende a elaborar los platillos mexicanos que amas, de manera saludable y sin sacrificar su delicioso sabor.',
     videoUrl: 'https://youtube.com/embed/puOrWvvzJjg',
-    value: 25,
+    value: 35,
     redirect: false,
     links : {
         15: {
