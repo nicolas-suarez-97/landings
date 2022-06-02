@@ -8,11 +8,11 @@ import styles, {
     banner__video,
     banner__buttonRow,
     banner__button,
+    banner__mobileBackground,
     circle,
 } from "./topBanner.module.scss";
 import ActionButton from "../../../components/actionButton";
 import VideoComponent from "../../../components/videoComponent";
-import ReactPlayer from "react-player";
 
 const TopBannerSection = ({videoUrl, banner, linkData}) => {
     const {title, subtitle, backgroundImage, isCircle, primaryButtonLabel, secondaryButtonLabel} = banner;
@@ -35,6 +35,7 @@ const TopBannerSection = ({videoUrl, banner, linkData}) => {
                 <div className={banner__content}>
                     <h1 className={banner__title}>{title}</h1>
                     <h2 className={banner__subtitle}>{subtitle}</h2>
+                    <img alt="" src={backgroundImage} className={`${banner__mobileBackground} ${isCircle ? circle : null}`}/>
                     <div className={banner__buttonRow}>
                         <ActionButton
                             url={url}
@@ -50,13 +51,9 @@ const TopBannerSection = ({videoUrl, banner, linkData}) => {
                         </div>
                     </div>
                 </div>
-                { backgroundImage
-                    ? <img alt="" src={backgroundImage} className={`${banner__background} ${isCircle ? circle : null}`}/>
-                    : null
-                }
-
+                <img alt="" src={backgroundImage} className={`${banner__background} ${isCircle ? circle : null}`}/>
             </section>
-            { backgroundImage && videoUrl
+            { videoUrl
                 ? (
                     <section
                         ref={videoSectionRef}

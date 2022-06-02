@@ -2,16 +2,16 @@
 
 .banner {
   border-radius: $border-radius-2;
-  padding: $separation-62 $separation-32 100px;
-  position: relative;
+  padding: $separation-24 $separation-32 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   &__content {
-    position: relative;
-    z-index: 2;
+
   }
 
   &__title {
-    width: 60%;
     text-transform: capitalize;
     text-align: start;
     font-size: 50px;
@@ -84,14 +84,16 @@
 
   &__background {
     border-radius: $border-radius-2;
-    height: 450px;
-    width: 450px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 1;
+    max-height: 350px;
+    max-width: 350px;
+    height: 45%;
+    width: 45%;
     transition: all ease-out 0.3s;
-    margin-right: $separation-32;
+    margin-top: $separation-48;
+  }
+
+  &__mobileBackground {
+    display: none;
   }
 
   &__video {
@@ -114,8 +116,10 @@
 @media (max-width: $laptop-screen) {
   .banner {
     &__background {
-      width: 300px;
-      height: 300px;
+      max-width: 300px;
+      max-height: 300px;
+      width: 40%;
+      margin-top: 0;
     }
 
     &__video {
@@ -139,9 +143,9 @@
     }
 
     &__background {
-      width: 200px;
-      height: 200px;
-      margin-right: $separation-16;
+      max-width: 200px;
+      max-height: 200px;
+      width: 35%;
     }
 
     &__video {
@@ -155,19 +159,37 @@
 @media (max-width: $mobile-screen) {
   .banner {
     padding: 0 $separation-8;
+    flex-direction: column;
 
     &__title {
       font-size: 40px;
+      text-align: center;
     }
 
     &__subtitle {
       font-size: 20px;
+      text-align: center;
     }
 
     &__background {
-      width: 150px;
-      height: 150px;
-      margin-right: 0;
+      display: none;
+    }
+
+    &__mobileBackground {
+      display: block;
+      border-radius: $border-radius-2;
+      transition: all 0.5s ease-in-out;
+      width: 70%;
+      height: 70%;
+      margin: $separation-48 auto;
+    }
+
+    &__buttonRow {
+      justify-content: space-evenly;
+    }
+
+    &__button {
+      margin: 0;
     }
 
     &__video {

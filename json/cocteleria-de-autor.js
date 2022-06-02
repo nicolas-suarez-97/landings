@@ -29,8 +29,8 @@ export const LandingData = {
     banner: {
         title: 'Coctelería de autor online',
         subtitle: 'Master Class',
-        backgroundImage: 'https://images.pexels.com/photos/5041570/pexels-photo-5041570.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-        isCircle: true,
+        backgroundImage: '/img/cocteleria_de_autor.png',
+        isCircle: false,
         primaryButtonLabel: 'Lo quiero !!',
         secondaryButtonLabel: 'Conocer más',
     },
@@ -210,13 +210,23 @@ export const LandingData = {
     },
     getStarted: {
         title: '¿Qué esperas para empezar a aprender?',
-        subtitle: 'Ingresa ahora y conoce todo el contenido que tenemos preparado para ti.',
-        imageUrl: 'https://cdn.pixabay.com/photo/2018/08/30/23/51/taco-3643599_960_720.png',
+        subtitle: 'Ingresa ahora y conoce todo el contenido que está preparado para ti.',
+        imageUrl: 'https://cdn.pixabay.com/photo/2021/09/09/07/35/drink-6609727_960_720.png',
         buttonLabel: 'Registrarme',
     },
     producer: {
-        title: 'Acerca de la productora',
-        description: 'Desarrollado por NIDIA GONZÁLEZ, apasionada de las artes culinarias. Diagnosticada con diabetes desde hace 15 años, lleva 10 años dedicándose al negocio de la gastronomía, siendo dueña de negocios de banquetes y restaurante. Descubrió la manera de poder comer los platillos prohibidos para los diabéticos sin poner en riesgo su salud y sin perder su exquisito sabor.',
+        title: 'Acerca del productor',
+        description: 'RODRIGO MUÑOZ' +
+            '<br/> <br/>' +
+            'Bartender profesional, Jefe de barra y emprendedor. ' +
+            'Ha enfocado su carrera a mostrarle al mundo todo sobre la coctelería clásica y de autor, siendo profesor, ' +
+            'jefe de barra, dueño de bares y ganador de múltiples premios internacionales en concursos de coctelería.' +
+            '<br/> <br/>' +
+            'Rodrigo ha desarrollado recetas probadas y aprobadas por todos sus clientes, que no solo son amantes de un ' +
+            'buen trago o cóctel, sino también personas que buscan vivir una experiencia a través de ellos.' +
+            '<br/> <br/>' +
+            'Rodrigo lleva años buscando y creando las mejores recetas de autor para compartirte a través de este curso, ' +
+            'junto a él podrás vivir, sentir la coctelería y el mundo detrás de la barra como  una filosofía de vida.',
     },
     faq: {
         title: 'Preguntas frecuentes',
