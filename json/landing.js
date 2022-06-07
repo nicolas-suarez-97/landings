@@ -194,6 +194,14 @@ export const LandingData = {
         buttonLabel: 'Registrarme',
         buttonAction: '/',
     },
+    gallery: {
+        title: 'Preparaciones',
+        images: [
+            '/img/cocteleriaDeAutor/preparaciones1.png',
+            '/img/cocteleriaDeAutor/preparaciones2.png',
+            '/img/cocteleriaDeAutor/preparaciones3.png',
+        ],
+    },
     producer: {
         title: 'Acerca de la productora',
         description: 'Desarrollado por NIDIA GONZÁLEZ, apasionada de las artes culinarias. Diagnosticada con diabetes desde hace 15 años, lleva 10 años dedicándose al negocio de la gastronomía, siendo dueña de negocios de banquetes y restaurante. Descubrió la manera de poder comer los platillos prohibidos para los diabéticos sin poner en riesgo su salud y sin perder su exquisito sabor.',

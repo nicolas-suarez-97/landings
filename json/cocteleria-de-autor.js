@@ -5,8 +5,8 @@ export const LandingData = {
     courseUrl: '/',
     pageType: 'landing',
     description: 'Aprende a elaborar los platillos mexicanos que amas, de manera saludable y sin sacrificar su delicioso sabor.',
-    videoUrl: 'https://youtube.com/embed/puOrWvvzJjg',
-    value: 35,
+    videoUrl: 'https://youtube.com/embed/wAa5WP4HlU4',
+    value: 25,
     redirect: false,
     links : {
         15: {
@@ -29,9 +29,9 @@ export const LandingData = {
     banner: {
         title: 'Coctelería de autor online',
         subtitle: 'Master Class',
-        backgroundImage: '/img/cocteleria_de_autor.png',
+        backgroundImage: '/img/cocteleriaDeAutor/cocteleria_de_autor.png',
         isCircle: false,
-        primaryButtonLabel: 'Lo quiero !!',
+        primaryButtonLabel: 'Lo quiero !',
         secondaryButtonLabel: 'Conocer más',
     },
     categories: [
@@ -58,27 +58,29 @@ export const LandingData = {
         title: '¿Qué vas a lograr?',
         items: [
             {
-                label: 'Aprenderás sencillas sustituciones y técnicas para que vuelvas a disfrutar de comida mexicana llena de sabor sin descuidar tu diabetes, a través de recetas y tips fáciles de seguir.',
+                label: 'Te ofrecemos más de 5 años de experiencia capacitando a emprendedores y entusiastas.',
                 icon: 'star',
             },
             {
-                label: 'Sabrás los tipos de aceites adecuados, como eliminar esos ingredientes que tanto daño hacen, sin sacrificar el sabor.',
-                icon: 'check_circle',
+                label: 'Todos los profesores son titulados de carreras gastronómicas con amplia experiencia en hoteles y restaurantes.',
+                icon: 'school',
             },
             {
-                label: 'Aprenderás a preparar más de 15 platillos mexicanos llenos de sabor y aptos para diabéticos.',
-                icon: 'bolt',
+                label: 'Aprende desde casa sin gastar tiempo o dinero en trasporte.',
+                icon: 'paid',
             },
             {
-                label: 'Accederás al certificado avalado por Hotmart y Seminarios Online.',
-                icon: 'account_circle',
+                label: 'Al finalizar el curso obtendrás automáticamente un certificado que acreditará todo tu aprendizaje logrado.' +
+                    '<br/>' +
+                    'El certificado será enviado a tu correo en formato PDF descargable.',
+                icon: 'workspace_premium',
             },
         ]
     },
     benefits: {
         title: 'Beneficios adicionales',
-        certificateUrl: 'https://cdn.shopify.com/s/files/1/0078/9620/3362/files/CERTIFICADO_PARA_WEB-cocteleriadeautor_1400x.png?v=1630174592',
-        warrantyUrl: 'https://el-socio.com/wp-content/uploads/2020/10/Garantia.png',
+        certificateUrl: '/img/cocteleriaDeAutor/certificado.png',
+        warrantyUrl: '/img/garantia7.png',
         benefitsList: [
             {
                 icon: 'workspace_premium',
@@ -181,29 +183,29 @@ export const LandingData = {
         items: [
             {
                 author: 'Diego Contreras',
-                authorPicture: 'https://cdn-icons-png.flaticon.com/512/147/147140.png',
+                authorPicture: '/img/cocteleriaDeAutor/diego-contreras.jpg',
                 review: 'Desde hace mucho, buscaba cursos online que de verdad tuvieran calidad y me ayudaran ' +
                     'a mejorar a mi gusto a ofrecer a mis amigos ricos tragos a la hora de compartir. ' +
                     'Que suerte encontrarlos. Los súper recomiendo.',
             },
             {
                 author: 'Luis Alberto Silva',
-                authorPicture: 'https://cdn-icons-png.flaticon.com/512/147/147144.png',
+                authorPicture: '/img/cocteleriaDeAutor/luis-alberto-silva.jpg',
                 review: 'Quedé gratamente sorprendido por la variedad de ' +
                     'cócteles que se enseñan en el curso, además de las ' +
-                    'técnicas modernas de uso de sifónoel disecado de frutas ' +
-                    'para decoración, todas esas cosas dan un carácter ' +
-                    'profesionalalo que uno hace, lo que más me gusta ' +
+                    'técnicas modernas de uso de sifón o el disecado de frutas ' +
+                    'para decoración. Todas esas cosas dan un carácter ' +
+                    'profesional a lo que uno hace, lo que más me gusta ' +
                     'también es que uno puede hacer el curso en casa sin ' +
-                    'tener que iraun lugaryrestarle tiempoaotras tareas, ' +
+                    'tener que ir aun lugar y restarle tiempo a otras tareas, ' +
                     'muy agradecido por el curso!!!',
             },
             {
                 author: 'Alicia Sáez',
-                authorPicture: 'https://www.pngarts.com/files/3/Avatar-PNG-High-Quality-Image.png',
+                authorPicture: '/img/cocteleriaDeAutor/alicia-saez.jpg',
                 review: 'Super entretenido el curso de cocteleria online, lo ' +
-                    'puedes seguir en tu casaypracticando de inmediato, ' +
-                    'las explicaciones son muy buenasyse nota que el profe ' +
+                    'puedes seguir en tu casa y practicando de inmediato, ' +
+                    'las explicaciones son muy buenas y se nota que el profe ' +
                     'sabe, excelente iniciativa de cursos de cocinal! ',
             },
         ],
@@ -213,6 +215,14 @@ export const LandingData = {
         subtitle: 'Ingresa ahora y conoce todo el contenido que está preparado para ti.',
         imageUrl: 'https://cdn.pixabay.com/photo/2021/09/09/07/35/drink-6609727_960_720.png',
         buttonLabel: 'Registrarme',
+    },
+    gallery: {
+        title: 'Preparaciones',
+        images: [
+            '/img/cocteleriaDeAutor/preparaciones1.png',
+            '/img/cocteleriaDeAutor/preparaciones2.png',
+            '/img/cocteleriaDeAutor/preparaciones3.png',
+        ],
     },
     producer: {
         title: 'Acerca del productor',
@@ -236,12 +246,31 @@ export const LandingData = {
                 answer: '¡Sí! Luego de que realices la compra vas a poder acceder a las clases cuando y donde quieras. El curso es tuyo de por vida.',
             },
             {
-                question: '¿Cuándo inicia el curso?',
-                answer: 'Todo el contenido es 100% en línea, con clases pregrabadas a las que tendrás acceso luego de la compra del curso. ¡Puedes iniciarlo y desarrollarlo a tu propio ritmo!',
+                question: '¿Cuándo inicia el curso y en qué horarios?',
+                answer: 'Inmediatamente luego del pago recibirás tu acceso para comenzar este curso. Podrás crear tu propia ' +
+                    'contraseña y enviaremos este respaldo a tu correo. Es un curso online que se adapta a tu ritmo, tú decide ' +
+                    'cuándo comenzar y cuándo terminar. No tiene un horarios definidos ya que todo el contenido ya está cargado para ti.',
             },
             {
                 question: '¿Cómo obtengo el certificado del curso?',
                 answer: 'Luego de que termines el curso, la plataforma te brindará automáticamente la opción para descargar el certificado.',
+            },
+            {
+                question: '¿Qué necesito para el curso?',
+                answer: 'Internet, un computador, tablet o celular. Pero lo más importante son las ganas de aprender.',
+            },
+            {
+                question: '¿Debo invertir en utensilios?',
+                answer: 'No, nuestro fin no es el que te pongas a comprar materiales o utensilios; queremos que primero aprendas y ' +
+                    'luego, decidas con conocimiento que recetas te gustarían hacer, que utensilios necesitarás, cuales tienes y cuales deberías comprar.',
+            },
+            {
+                question: '¿Envían una lista de ingredientes?',
+                answer: 'Todas las recetas que aprenderás contienen los ingredientes, preparación paso a paso y fichas técnicas en formato pdf para descargar.',
+            },
+            {
+                question: '¿Cómo es cada lección?',
+                answer: 'En cada lección encontrarás un video tutorial de la receta paso a paso, muy simple y con una duración entre 2 a 10 min. Podrás descargar el material en pdf con los ingredientes y preparación.',
             },
         ],
     },

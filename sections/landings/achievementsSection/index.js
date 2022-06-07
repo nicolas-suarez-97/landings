@@ -26,7 +26,7 @@ const AchievementsSection = ({achievement}) => {
                             ? <span className={`material-icons ${colors[index]}`}>{i.icon}</span>
                             : null
                         }
-                        {i.label}
+                        <p dangerouslySetInnerHTML={{__html: i.label}}/>
                     </li>
                 ))}
             </ul>

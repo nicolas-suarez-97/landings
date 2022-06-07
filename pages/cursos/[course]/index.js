@@ -12,6 +12,7 @@ import FaqSection from "../../../sections/landings/faqSection";
 import PricingSection from "../../../sections/landings/pricingSection";
 import fs from "fs";
 import PaymentModal from "../../../sections/landings/paymentModal";
+import GallerySection from "../../../sections/landings/gallerySection";
 
 const Course = ({course}) => {
     console.log(course)
@@ -27,6 +28,7 @@ const Course = ({course}) => {
         modules,
         reviews,
         getStarted,
+        gallery,
         producer,
         faq,
         pricing,
@@ -64,6 +66,10 @@ const Course = ({course}) => {
 
                 <AchievementsSection
                     achievement={achievement}
+                />
+
+                <GallerySection
+                    gallery={gallery}
                 />
 
                 <ProducerSection
