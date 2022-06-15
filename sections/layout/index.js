@@ -17,10 +17,10 @@ const Layout = props => {
         //{path: "/cursos", label: "Más Cursos"},
     ];
     const footerOptions = [
-        'nosotros',
-        'contacto',
-        'terminos',
-        'faq',
+        //'nosotros',
+        //'contacto',
+        //'terminos',
+        //'faq',
     ];
 
     return (

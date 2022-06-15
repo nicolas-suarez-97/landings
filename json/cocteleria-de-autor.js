@@ -110,7 +110,7 @@ export const LandingData = {
     },
     modules: {
         title: 'Contenido del curso',
-        itemsIcon: 'check',
+        itemsIcon: 'local_bar',
         steps: [
             {
                 title: 'Módulo 1 - Coctelería de autor',
