@@ -16,7 +16,11 @@ import VideoComponent from "../../../components/videoComponent";
 
 const TopBannerSection = ({videoUrl, banner, linkData}) => {
     const {title, subtitle, backgroundImage, isCircle, primaryButtonLabel, secondaryButtonLabel} = banner;
-    const {url, discount, setIsModalOpen} = linkData
+    linkData = {
+        ...linkData,
+        buttonStyle: banner__button,
+        label: primaryButtonLabel
+    }
     const [play, setPlay] = useState(false);
     const videoSectionRef = useRef(null);
 
@@ -38,10 +42,7 @@ const TopBannerSection = ({videoUrl, banner, linkData}) => {
                     <img alt="" src={backgroundImage} className={`${banner__mobileBackground} ${isCircle ? circle : null}`}/>
                     <div className={banner__buttonRow}>
                         <ActionButton
-                            url={url}
-                            label={primaryButtonLabel}
-                            buttonStyle={banner__button}
-                            onClickAction={setIsModalOpen}
+                            linkData={linkData}
                         />
                         <div className={banner__moreButton}>
                             <span className="material-icons">play_arrow</span>

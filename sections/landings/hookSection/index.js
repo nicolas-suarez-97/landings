@@ -8,15 +8,18 @@ import ActionButton from "../../../components/actionButton";
 const HookSection = ({hook, linkData}) => {
     const {title, content, buttonLabel} = hook;
     const {url, discount, setIsModalOpen} = linkData
+    linkData = {
+        ...linkData,
+        buttonStyle: hook__actionButton,
+        label: buttonLabel
+    }
+
     return (
         <section className={styles.hook}>
             <h2 className={styles.title}>{title}</h2>
             <p className={hook__content} dangerouslySetInnerHTML={{__html: content}} />
             <ActionButton
-                url={url}
-                label={buttonLabel}
-                buttonStyle={hook__actionButton}
-                onClickAction={setIsModalOpen}
+                linkData={linkData}
             />
         </section>
     );

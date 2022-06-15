@@ -2,13 +2,14 @@ import React from "react";
 import styles from "./actionButton.module.scss";
 import * as ga from '../../lib/ga';
 
-const ActionButton = ({url, label, buttonStyle, onClickAction}) => {
-
+const ActionButton = ({linkData}) => {
+    const {url, label, buttonStyle, onClickAction, course} = linkData;
     const gaEvent = {
         action: 'button_click',
         params: {
             'link': url,
-            'label': label
+            'label': label,
+            'page_name': '/cursos/' + course,
         },
     }
 
@@ -18,7 +19,6 @@ const ActionButton = ({url, label, buttonStyle, onClickAction}) => {
                 onClick={() => {
                     onClickAction(true)
                     ga.event(gaEvent)
-                    ga.pageview(url)
                 }}
                 className={`${styles.button} ${buttonStyle}`}
                 target="_blank"
@@ -34,7 +34,6 @@ const ActionButton = ({url, label, buttonStyle, onClickAction}) => {
                 rel="noreferrer"
                 onClick={() => {
                     ga.event(gaEvent)
-                    ga.pageview(url)
                 }}
             >
                 {label}

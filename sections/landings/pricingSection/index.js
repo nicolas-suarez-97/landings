@@ -11,6 +11,11 @@ const PricingSection = ({pricing, linkData, value}) => {
         const position = window.pageYOffset;
         setScrollPosition(position);
     };
+    linkData = {
+        ...linkData,
+        buttonStyle: styles.pricing__button,
+        label: "Comprar",
+    }
 
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
@@ -33,10 +38,7 @@ const PricingSection = ({pricing, linkData, value}) => {
         <section className={`${styles.pricing} ${showSection() ? styles.hide : ''}`}>
             <h2 className={styles.pricing__text}>{label} <span>${value} USD</span></h2>
             <ActionButton
-                url={url}
-                label="Comprar"
-                buttonStyle={styles.pricing__button}
-                onClickAction={setIsModalOpen}
+                linkData={linkData}
             />
             <div className={styles.pricing__close} onClick={() => setHideSection(true)}><i className="material-icons">close</i></div>
         </section>

@@ -12,6 +12,11 @@ import ActionButton from "../../../components/actionButton";
 const GetStartedSection = ({getStarted, linkData}) => {
     const {title, subtitle, imageUrl, buttonLabel} = getStarted;
     const {url, discount, setIsModalOpen} = linkData
+    linkData = {
+        ...linkData,
+        buttonStyle: getStarted__button,
+        label: buttonLabel
+    }
 
     return (
         <section className={styles.getStarted}>
@@ -20,10 +25,7 @@ const GetStartedSection = ({getStarted, linkData}) => {
                     <h1 className={getStarted__title}>{title}</h1>
                     <h4 className={getStarted__subtitle}>{subtitle}</h4>
                     <ActionButton
-                        label={buttonLabel}
-                        url={url}
-                        buttonStyle={getStarted__button}
-                        onClickAction={setIsModalOpen}
+                        linkData={linkData}
                     />
                 </div>
                 <div>

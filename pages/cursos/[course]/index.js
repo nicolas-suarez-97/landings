@@ -37,13 +37,16 @@ const Course = ({course}) => {
         links,
     } = LandingData;
     const [isModalOpen, setIsModalOpen] = useState(false)
-    let linkData = links[value]
+    let linkData = {
+        ...links[value],
+        course
+    }
 
     if (!redirect) {
         linkData = {
             ...linkData,
             isModalOpen,
-            setIsModalOpen
+            onClickAction: setIsModalOpen
         }
     }
 
