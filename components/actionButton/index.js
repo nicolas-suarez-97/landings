@@ -18,6 +18,7 @@ const ActionButton = ({url, label, buttonStyle, onClickAction}) => {
                 onClick={() => {
                     onClickAction(true)
                     ga.event(gaEvent)
+                    ga.pageview(url)
                 }}
                 className={`${styles.button} ${buttonStyle}`}
                 target="_blank"
@@ -31,7 +32,10 @@ const ActionButton = ({url, label, buttonStyle, onClickAction}) => {
                 className={`${styles.button} ${buttonStyle}`}
                 target="_blank"
                 rel="noreferrer"
-                onClick={() => ga.event(gaEvent)}
+                onClick={() => {
+                    ga.event(gaEvent)
+                    ga.pageview(url)
+                }}
             >
                 {label}
             </a>
