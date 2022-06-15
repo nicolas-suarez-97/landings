@@ -5,7 +5,7 @@ import * as ga from '../../lib/ga';
 const ActionButton = ({url, label, buttonStyle, onClickAction}) => {
 
     const gaEvent = {
-        action: 'view_item',
+        action: 'button_click',
         params: {
             'link': url,
             'label': label
