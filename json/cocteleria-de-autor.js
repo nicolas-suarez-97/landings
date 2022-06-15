@@ -2,7 +2,7 @@ export const LandingData = {
     id: '',
     creationDate: '',
     modificationDate: '',
-    courseUrl: '/',
+    courseUrl: 'https://cursococteleriadeautoronline.club.hotmart.com/login',
     pageType: 'landing',
     description: 'Aprende a elaborar los platillos mexicanos que amas, de manera saludable y sin sacrificar su delicioso sabor.',
     videoUrl: 'https://youtube.com/embed/wAa5WP4HlU4',

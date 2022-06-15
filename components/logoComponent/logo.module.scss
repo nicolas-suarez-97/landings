@@ -4,6 +4,7 @@
 .logo {
   min-width: 200px;
   font-family: 'Ms Madi', cursive;
+  user-select: none;
 
   @media (max-width: $mobile-screen) {
     font-size: 26px;
